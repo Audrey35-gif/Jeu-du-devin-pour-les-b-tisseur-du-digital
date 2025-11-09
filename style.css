@@ -1,0 +1,127 @@
+/* Reset basique utile */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* BODY : centrage + style global */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  background-color: #f7f7f8;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 24px; /* espace sur petits écrans */
+}
+
+/* Conteneur général pour limiter la largeur */
+#jeu-conteneur {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* IMAGE : responsive et propre */
+#image-jeu {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* TITRE / PARAGRAPHES */
+h1 {
+  color: #08255a;
+  margin: 14px 0 10px;
+  font-size: 4rem;
+}
+
+p {
+  margin: 8px 0 16px;
+  line-height: 1.7;
+  font-size: 2rem;
+}
+
+/* INPUT : plus fluide et accessible */
+#tentative {
+  padding: 10px;
+  font-size: 1.15rem;
+  border: 2px solid #959ece;
+  border-radius: 8px;
+  width: 260px;
+  max-width: 90%;
+  text-align: center;
+  margin-bottom: 15px;
+  background: white;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* garder un style de focus visible pour l'accessibilité */
+#tentative:focus,
+#tentative:focus-visible {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 4px rgba(26,115,232,0.12);
+}
+
+/* BOUTONS : ergonomie + hover */
+button {
+  padding: 12px 22px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin: 8px;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Interaction tactile légère */
+button:active { transform: translateY(1px); }
+
+/* Focus visible pour les boutons */
+button:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(26,115,232,0.12);
+}
+
+/* Couleurs spécifiques */
+#boutonDeviner {
+  background-color: #007bff;
+  color: white;
+}
+#boutonDeviner:hover { background-color: #0056b3; }
+
+#boutonRejouer {
+  background-color: #28a745;
+  color: white;
+}
+#boutonRejouer:hover { background-color: #1e7e34; }
+
+/* ZONE RESULTAT */
+#resultat {
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  min-height: 48px;
+  text-align: center;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
