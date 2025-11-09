@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    <title>Jeu du Devin</title>
+</head>
+
+<body>
+    
+<div id="jeu-conteneur">  
+    <img src="./Batisseur.png" alt="Décoration du jeu" id="image-jeu">
+    </div>
+
+    <h1>Jeu du Devin</h1>
+
+    <p>Je pense à un nombre entre 1 et 20.</p>
+    
+    <input type="number" id="tentative" placeholder="Entre ton nombre" min="1" max="20">
+    
+    <button id="boutonDeviner" onclick="verifierTentative()">Deviner</button> 
+
+    <button id="boutonRejouer" onclick="reinitialiserJeu()" style="display: none;">Rejouer</button> 
+    
+    <p id="resultat"></p>
+
+    <script src="./jeu.js"></script>
+</body>
+</html>
